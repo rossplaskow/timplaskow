@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+    }
+    .small-logo {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      height: 50px;
+      z-index: 2;
+    }
+    .container {
+      position: relative;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    /* New styles for iframe wrapper */
+    .iframe-wrapper {
+      position: relative;
+      height: 100%;  /* Adjust the height here */
+      overflow: hidden;
+    }
+  
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      font-family: 'Gabarito', serif;
+      font-size: 18px;
+      color: white;
+      z-index: 1;
+    }
+
+    .contact {
+      position: absolute;
+      bottom: 32px;
+      right: 130px;
+      font-family: 'Gabarito', serif;
+      font-size: 18px;
+      color: white;
+      z-index: 1;
+    }
+
+    .social-icons {
+      position: absolute;
+      bottom: 26px;
+      right: 30px;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .social-icons img {
+      height: 30px;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <a href="/">
+    <img src="logo.png" class="small-logo" alt="Home">
+  </a>
+  <div class="container">
+    <div class="footer">2023 Ⓒ TIM PLASKOW LTD</div>
+    
+    <div class="contact">
+      <a href="contact" style="color:white; text-decoration:none;">CONTACT</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/timplaskow/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+      <a href="https://instagram.com/timplaskow" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+
+    <!-- Wrap the iframe in a container -->
+    <div class="iframe-wrapper">
+      <iframe
+        id="JotFormIFrame-232764247262357"
+        title="General Inquiry Contact Form"
+        onload="window.parent.scrollTo(0,0)"
+        allowtransparency="true"
+        allowfullscreen="true"
+        src="https://form.jotform.com/232764247262357"
+        frameborder="0"
+        style="min-width:100%;max-width:100%;height:120%;border:none;" 
+        scrolling="yes"
+      ></iframe>
+    </div>
+  </div>
+</body>
+</html>
+ 
