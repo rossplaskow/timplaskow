@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>London Property Developer | Development Consultant</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .small-logo {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      height: 50px;
+      z-index: 2;
+    }
+    .container {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(36, 14, 80, 0.25);
+      z-index: 0;
+    }
+
+    video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .logo {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      height: 250px;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 1s, top 1s;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .subheading-container {
+      position: absolute;
+      top: calc(45% + 140px);
+      left: 50%;
+      text-align: center;
+      transform: translateX(-50%) translateY(-50%);
+      font-weight: 900;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .subheading {
+      font-family: 'Gabarito', serif;
+      font-size: 38px;
+      color: white;
+      margin: 0;
+    }
+
+    .subheading-jp {
+      font-family: 'Gabarito', serif;
+      font-size: 18px;
+      color: white;
+      margin: 0;
+    }
+
+    .subheading-london {
+      font-family: 'Gabarito', serif;
+      font-size: 18px;
+      color: white;
+      margin: 0;
+      font-weight: bold;
+    }
+
+  
+    .footer {
+      position: absolute;
+      bottom: 30px;
+      left: 140px;
+      font-family: 'Gabarito', serif;
+      font-size: 18px;
+      color: white;
+      opacity: 0;
+      z-index: 1;
+      transform: translateX(-50%);
+    }
+
+    .contact {
+      position: absolute;
+      bottom: 32px;
+      right: 130px;
+      font-family: 'Gabarito', serif;
+      font-size: 18px;
+      color: white;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .social-icons {
+      position: absolute;
+      bottom: 26px;
+      right: 30px;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .social-icons img {
+      height: 30px;
+      margin-left: 20px;
+    }
+
+    .social-icons p {
+      margin: 0;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">
+    <img src="logo.png" class="small-logo" alt="Home">
+  </a>
+  <div class="container">
+    <video autoplay muted loop id="videoBackground">
+      <source src="tp_bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay"></div>
+
+    <img src="logo.png" class="logo" alt="Logo">
+    
+    <div class="subheading-container">
+      <div class="subheading">TIM PLASKOW</div>
+      <div class="subheading-jp">London Property Developer | Development Consultant</div>
+      <div class="subheading-london"></div>
+    </div>
+
+    <div class="footer">2023 Ⓒ TIM PLASKOW LTD</div>
+    
+    <div class="contact">
+      <a href="contact.html" style="color:white; text-decoration:none;">CONTACT</a>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://linkedin.com/timplaskow" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+      <a href="https://instagram.com/timplaskow" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(() => {
+        const logo = document.querySelector('.logo');
+        logo.style.opacity = '1';
+        logo.style.top = 'calc(45% - 20px)';
+      }, 1000);
+
+      setTimeout(() => {
+        const subheadingContainer = document.querySelector('.subheading-container');
+        subheadingContainer.style.transition = 'opacity 1s';
+        subheadingContainer.style.opacity = '1';
+      }, 2000);
+
+      setTimeout(() => {
+        const footer = document.querySelector('.footer');
+        footer.style.transition = 'opacity 1s';
+        footer.style.opacity = '1';
+      }, 2500);
+
+      setTimeout(() => {
+        const contact = document.querySelector('.contact');
+        contact.style.transition = 'opacity 1s';
+        contact.style.opacity = '1';
+      }, 2700);
+    });
+  </script>
+</body>
+</html>
