@@ -167,49 +167,43 @@
     </div>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
+<script>
+    // Detect if the user is on a mobile phone
+    const isMobile = /iPhone|Android/i.test(navigator.userAgent) && !/iPad/i.test(navigator.userAgent);
+    const video = document.getElementById('videoBackground');
 
+    if (isMobile) {
+      // Remove the video if the user is on a mobile phone
+      video.style.display = 'none';
+    } else {
+      // Play the video if the user is not on a mobile phone
+      video.play();
+    }
 
-      window.addEventListener('load', function() {
-      const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-      const video = document.getElementById('videoBackground');
-      
-      if (isMobile) {
-        // Remove the video if the user is on a mobile phone
-        video.remove();
-      } else {
-        // Play the video if the user is not on a mobile phone
-        video.play();
-      }
+    // Your existing timeouts and other code
+    setTimeout(() => {
+      const logo = document.querySelector('.logo');
+      logo.style.opacity = '1';
+      logo.style.top = 'calc(45% - 20px)';
+    }, 1000);
 
-      
-      setTimeout(() => {
-        const logo = document.querySelector('.logo');
-        logo.style.opacity = '1';
-        logo.style.top = 'calc(45% - 20px)';
-      }, 1000);
+    setTimeout(() => {
+      const subheadingContainer = document.querySelector('.subheading-container');
+      subheadingContainer.style.transition = 'opacity 1s';
+      subheadingContainer.style.opacity = '1';
+    }, 2000);
 
-      setTimeout(() => {
-        const subheadingContainer = document.querySelector('.subheading-container');
-        subheadingContainer.style.transition = 'opacity 1s';
-        subheadingContainer.style.opacity = '1';
-      }, 2000);
+    setTimeout(() => {
+      const footer = document.querySelector('.footer');
+      footer.style.transition = 'opacity 1s';
+      footer.style.opacity = '1';
+    }, 2500);
 
-      setTimeout(() => {
-        const footer = document.querySelector('.footer');
-        footer.style.transition = 'opacity 1s';
-        footer.style.opacity = '1';
-      }, 2500);
-
-      setTimeout(() => {
-        const contact = document.querySelector('.contact');
-        contact.style.transition = 'opacity 1s';
-        contact.style.opacity = '1';
-      }, 2700);
-
-      
-    });
+    setTimeout(() => {
+      const contact = document.querySelector('.contact');
+      contact.style.transition = 'opacity 1s';
+      contact.style.opacity = '1';
+    }, 2700);
   </script>
 </body>
 </html>
