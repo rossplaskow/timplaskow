@@ -134,6 +134,27 @@
       margin: 0;
       margin-left: 20px;
     }
+
+
+    @media only screen and (max-width: 768px) {
+    .logo {
+      height: 125px;  /* Half the original size */
+    }
+    .subheading {
+      font-size: 19px;  /* Half the original size */
+    }
+    .subheading-jp {
+      font-size: 9px;  /* Half the original size */
+    }
+    .footer {
+      display: initial;
+    }
+    .footer-text {
+      display: none;  /* Make only the copyright text in the footer invisible */
+    }
+  }
+
+    
   </style>
 </head>
 <body>
@@ -156,7 +177,7 @@
       <div class="subheading-london"></div>
     </div>
 
-    <div class="footer">2023 Ⓒ TIM PLASKOW LTD</div>
+    <div class="footer"><span class="footer-text">2023 Ⓒ TIM PLASKOW LTD</span></div>
     
     <div class="contact">
       <a href="contact" style="color:white; text-decoration:none;">CONTACT</a>
