@@ -169,6 +169,21 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+
+
+      window.addEventListener('load', function() {
+      const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+      const video = document.getElementById('videoBackground');
+      
+      if (isMobile) {
+        // Remove the video if the user is on a mobile phone
+        video.remove();
+      } else {
+        // Play the video if the user is not on a mobile phone
+        video.play();
+      }
+
+      
       setTimeout(() => {
         const logo = document.querySelector('.logo');
         logo.style.opacity = '1';
@@ -192,6 +207,7 @@
         contact.style.transition = 'opacity 1s';
         contact.style.opacity = '1';
       }, 2700);
+
       
     });
   </script>
