@@ -142,15 +142,16 @@
     }
 
     .subheading-container {
-      top: calc(45% + 60px);
+      top: calc(45% + 80px);
     }
       
     .subheading {
       font-size: 18px; 
     }
     .subheading-jp {
-      font-size: 5px; 
+        font-size: 10px;  /* Adjust font size if necessary */
     }
+
     .footer {
       display: initial;
     }
@@ -178,7 +179,7 @@
     
     <div class="subheading-container">
       <div class="subheading">TIM PLASKOW</div>
-      <div class="subheading-jp">London Property Developer | Development Consultant</div>
+      <div class="subheading-jp" id="subheading-jp">London Property Developer | Development Consultant</div>
       <div class="subheading-london"></div>
     </div>
 
@@ -220,6 +221,20 @@
       contact.style.transition = 'opacity 1s';
       contact.style.opacity = '1';
     }, 2700);
+
+    // New function to change subheading text on mobile
+    function changeSubheadingText() {
+      const subheadingJP = document.getElementById('subheading-jp');
+      if (window.innerWidth <= 768) {
+        subheadingJP.innerText = 'London Property Developer\nDevelopment Consultant';
+      }
+    }
+
+    // Call the function on page load and window resize
+    changeSubheadingText();
+    window.addEventListener('resize', changeSubheadingText);
+
+
   </script>
 </body>
 </html>
