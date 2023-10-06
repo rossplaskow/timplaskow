@@ -24,7 +24,6 @@
       height: 100vh;
       overflow: hidden;
     }
-
     .overlay {
       position: absolute;
       top: 0;
@@ -34,7 +33,6 @@
       background: rgba(36, 14, 80, 0.25);
       z-index: 0;
     }
-
     video {
       position: absolute;
       top: 50%;
@@ -47,7 +45,6 @@
       background-color: black;
       transform: translateX(-50%) translateY(-50%);
     }
-
     .logo {
       position: absolute;
       top: 45%;
@@ -58,7 +55,6 @@
       transition: opacity 1s, top 1s;
       transform: translateX(-50%) translateY(-50%);
     }
-
     .subheading-container {
       position: absolute;
       top: calc(45% + 140px);
@@ -69,21 +65,18 @@
       opacity: 0;
       z-index: 1;
     }
-
     .subheading {
       font-family: 'Gabarito', serif;
       font-size: 38px;
       color: white;
       margin: 0;
     }
-
     .subheading-jp {
       font-family: 'Gabarito', serif;
       font-size: 18px;
       color: white;
       margin: 0;
     }
-
     .subheading-london {
       font-family: 'Gabarito', serif;
       font-size: 18px;
@@ -91,7 +84,6 @@
       margin: 0;
       font-weight: bold;
     }
-
   
     .footer {
       position: absolute;
@@ -104,7 +96,6 @@
       z-index: 1;
       transform: translateX(-50%);
     }
-
     .contact {
       position: absolute;
       bottom: 32px;
@@ -115,7 +106,6 @@
       opacity: 0;
       z-index: 1;
     }
-
     .social-icons {
       position: absolute;
       bottom: 26px;
@@ -124,34 +114,28 @@
       align-items: center;
       z-index: 1;
     }
-
     .social-icons img {
       height: 30px;
       margin-left: 20px;
     }
-
     .social-icons p {
       margin: 0;
       margin-left: 20px;
     }
-
-
     @media only screen and (max-width: 768px) {
     .logo {
       height: 125px;  /* Half the original size */
     }
-
     .subheading-container {
-      top: calc(45% + 80px);
+      top: calc(45% + 60px);
     }
       
     .subheading {
       font-size: 18px; 
     }
     .subheading-jp {
-        font-size: 10px;  /* Adjust font size if necessary */
+      font-size: 9px; 
     }
-
     .footer {
       display: initial;
     }
@@ -159,7 +143,6 @@
       display: none;  /* Make only the copyright text in the footer invisible */
     }
   }
-
     
   </style>
 </head>
@@ -172,56 +155,46 @@
       <source src="tp_bg.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-
     <div class="overlay"></div>
-
     <img src="logo.png" class="logo" alt="Logo">
     
     <div class="subheading-container">
       <div class="subheading">TIM PLASKOW</div>
-      <div class="subheading-jp" id="subheading-jp">London Property Developer | Development Consultant</div>
+      <div class="subheading-jp">London Property Developer | Development Consultant</div>
       <div class="subheading-london"></div>
     </div>
-
     <div class="footer"><span class="footer-text">2023 Ⓒ TIM PLASKOW LTD</span></div>
     
     <div class="contact">
       <a href="contact" style="color:white; text-decoration:none;">CONTACT</a>
     </div>
-
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/timplaskow/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
       <a href="https://instagram.com/timplaskow" target="_blank"><img src="instagram.png" alt="Instagram"></a>
     </div>
   </div>
-
 <script>
-
     // Your existing timeouts and other code
     setTimeout(() => {
       const logo = document.querySelector('.logo');
       logo.style.opacity = '1';
       logo.style.top = 'calc(45% - 20px)';
     }, 1000);
-
     setTimeout(() => {
       const subheadingContainer = document.querySelector('.subheading-container');
       subheadingContainer.style.transition = 'opacity 1s';
       subheadingContainer.style.opacity = '1';
     }, 2000);
-
     setTimeout(() => {
       const footer = document.querySelector('.footer');
       footer.style.transition = 'opacity 1s';
       footer.style.opacity = '1';
     }, 2500);
-
     setTimeout(() => {
       const contact = document.querySelector('.contact');
       contact.style.transition = 'opacity 1s';
       contact.style.opacity = '1';
     }, 2700);
-
   </script>
 </body>
 </html>
