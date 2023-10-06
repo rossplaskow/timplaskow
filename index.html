@@ -222,6 +222,12 @@
       contact.style.opacity = '1';
     }, 2700);
 
+    // Additional script to ensure video autoplay on mobile
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const video = document.getElementById('videoBackground');
+      video.play();
+    });
+  
     // New function to change subheading text on mobile
     function changeSubheadingText() {
       const subheadingJP = document.getElementById('subheading-jp');
