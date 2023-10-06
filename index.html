@@ -203,6 +203,23 @@
       contact.style.transition = 'opacity 1s';
       contact.style.opacity = '1';
     }, 2700);
+  
+    // Code to change subheading text on mobile
+    document.addEventListener('DOMContentLoaded', () => {
+      const subheadingJp = document.querySelector('.subheading-jp');
+      const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+      const handleMobileChange = (e) => {
+        if (e.matches) {
+          subheadingJp.innerHTML = 'London Property Developer<br>Development Consultant';
+        } else {
+          subheadingJp.textContent = 'London Property Developer | Development Consultant';
+        }
+      };
+
+      mobileQuery.addListener(handleMobileChange);
+      handleMobileChange(mobileQuery);
+    });
   </script>
 </body>
 </html>
