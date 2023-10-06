@@ -222,25 +222,6 @@
       contact.style.opacity = '1';
     }, 2700);
 
-    // Additional script to ensure video autoplay on mobile
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const video = document.getElementById('videoBackground');
-      video.play();
-    });
-  
-    // New function to change subheading text on mobile
-    function changeSubheadingText() {
-      const subheadingJP = document.getElementById('subheading-jp');
-      if (window.innerWidth <= 768) {
-        subheadingJP.innerText = 'London Property Developer\nDevelopment Consultant';
-      }
-    }
-
-    // Call the function on page load and window resize
-    changeSubheadingText();
-    window.addEventListener('resize', changeSubheadingText);
-
-
   </script>
 </body>
 </html>
