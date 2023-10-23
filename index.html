@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>London Property Developer | Development Consultant</title>
-  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="description" content="London Property Developer | Development Consultant">
+  <title>Tim Plaskow</title>
+  <link rel="icon" type="image/png" href="https://timplaskow.com/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
   <style>
     body, html {
@@ -123,6 +124,18 @@
       margin-left: 20px;
     }
 
+    h1.invisible {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      z-index: -1000;
+      opacity: 0;
+      pointer-events: none;
+    }
+
     @media only screen and (max-width: 768px) {
     .container {
       background: url('bg_still.png') no-repeat center center fixed;
@@ -159,9 +172,9 @@
     <img src="logo.png" class="small-logo" alt="Home">
   </a>
   <div class="container">
+    <h1 class="invisible">Tim Plaskow: London Property Developer | Development Consultant</h1>
     <video autoplay muted loop playsinline id="videoBackground">
       <source src="tp_bg.mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
     <div class="overlay"></div>
     <img src="logo.png" class="logo" alt="Logo">
