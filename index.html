@@ -184,7 +184,8 @@
       <div class="subheading-jp">London Property Developer | Development Consultant</div>
       <div class="subheading-london"></div>
     </div>
-    <div class="footer"><span class="footer-text">2023 Ⓒ TIM PLASKOW LTD</span></div>
+
+    <div class="footer"><span class="footer-text"><span id="current-year"></span> Ⓒ TIM PLASKOW LTD</span></div>
     
     <div class="contact">
       <a href="contact" style="color:white; text-decoration:none;">CONTACT</a>
@@ -194,7 +195,10 @@
       <a href="https://instagram.com/timplaskow" target="_blank"><img src="instagram.png" alt="Instagram"></a>
     </div>
   </div>
+
 <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
     // Your existing timeouts and other code
     setTimeout(() => {
       const logo = document.querySelector('.logo');
