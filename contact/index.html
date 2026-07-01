@@ -80,7 +80,7 @@
     <img src="logo.png" class="small-logo" alt="Home">
   </a>
   <div class="container">
-    <div class="footer">2023 Ⓒ TIM PLASKOW LTD</div>
+    <div class="footer"><span id="current-year"></span> Ⓒ TIM PLASKOW LTD</div>
     
     <div class="contact">
       <a href="/contact" style="color:white; text-decoration:none;">CONTACT</a>
@@ -106,6 +106,9 @@
       ></iframe>
     </div>
   </div>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
- 
